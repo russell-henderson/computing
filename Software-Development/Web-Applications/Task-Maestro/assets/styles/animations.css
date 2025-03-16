@@ -1,0 +1,40 @@
+/* animations.css - Task Maestro */
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Bounce effect for buttons */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Spin effect for loading elements */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Apply animations to elements */
+.fade-in { animation: fadeIn 0.5s ease-in-out; }
+.slide-up { animation: slideUp 0.5s ease-out; }
+.bounce { animation: bounce 0.3s ease-in-out; }
+.spin { animation: spin 1s linear infinite; }
+
+/* Task interactions */
+.task-complete {
+    animation: bounce 0.4s ease-in-out;
+}
+
+.task-added {
+    animation: fadeIn 0.3s ease-in-out;
+}
